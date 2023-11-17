@@ -63,9 +63,6 @@ ${data.contributors}
 ## Test 
 ${data.test}
 `;
-
-
-
 }
 
 module.exports = generateMarkdown;
