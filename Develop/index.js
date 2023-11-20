@@ -70,3 +70,22 @@ const questions = [
 ];
 
 
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, function (err) {
+    console.log(err);
+  });
+}
+
+// TODO: Create a function to initialize app
+function init() {
+  inquirer.prompt(questions)
+  .then(function (params) {
+    writeToFile("tutor.md", generateMarkdown(params));
+  });
+}
+
+// Function call to initialize app
+init();
+// var str = 100 + 150
+// console.log(`I have ${str}$`)
