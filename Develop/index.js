@@ -1,8 +1,12 @@
+let fs = require("fs");
+let inquirer = require("inquirer");
+let path = require("path");
+let generateMarkdown = require("./utils/generateMarkdown");
 
 //not sure if this is ok
 
 // TODO: Create an array of questions for user input
-const questions = [
+let questions = [
   {
     type: "input",
     name: "title",
